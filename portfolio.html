@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ayushi Awasthi | Senior SDET</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Senior SDET - Java, Selenium, API, AI-testing - 5 yrs experience">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css"/>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #38bdf8;
+      --accent2: #c084fc;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --glow: 0 0 12px var(--accent), 0 0 20px var(--accent2);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 5rem 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 500;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      background: #7dd3fc;
+      box-shadow: var(--glow);
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      background: var(--surface);
+      color: var(--accent2);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin: 0.2rem 0.2rem 0 0;
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav .logo {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 1.25rem;
+      color: var(--accent);
+    }
+
+    /* ---------- HERO ---------- */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    #hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 1rem;
+    }
+    #hero .type-writer {
+      font-size: 1.25rem;
+      color: var(--muted);
+      border-right: 2px solid var(--accent);
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: blink 0.75s step-end infinite;
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 5rem 0;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* ---------- 3-D PROJECT CARDS ---------- */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      perspective: 1000px;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s, box-shadow 0.3s;
+      transform-style: preserve-3d;
+    }
+    .project-card:hover {
+      transform: rotateX(5deg) rotateY(-5deg) scale(1.03);
+      box-shadow: var(--glow);
+    }
+    .project-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-body h3 {
+      margin-bottom: 0.5rem;
+    }
+    .project-body p {
+      flex: 1;
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    /* ---------- ANIMATED SKILL BARS ---------- */
+    .skill-bar {
+      background: var(--surface);
+      border-radius: 6px;
+      height: 10px;
+      margin: 0.5rem 0 1.5rem;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      width: 0;
+      transition: width 1.5s ease-out;
+    }
+
+    /* ---------- GITHUB CONTRIBUTION GRAPH ---------- */
+    .github-graph {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .github-graph img {
+      border-radius: 6px;
+    }
+
+    /* ---------- FOOTER ---------- -->
+    <footer>
+      <div class="container">
+        <div class="socials">
+          <a href="https://github.com/AyushiAwas" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+          <a href="mailto:ayushiawasthi1412@gmail.com" aria-label="Email"><i class="ph ph-envelope"></i></a>
+          <a href="https://linkedin.com/in/ayushi-awasthi424855218" target="_blank" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        </div>
+        <p>© 2025 Ayushi Awasthi. Built with vanilla HTML/CSS—no frameworks harmed.</p>
+      </div>
+    </footer>
+
+    <!-- ---------- SCRIPTS ---------- -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/script.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 800 });
+
+      /* ---------- TYPE-WRITER EFFECT ---------- */
+      const typer = document.querySelector('.type-writer');
+      const words = ["Senior SDET", "Test-Framework Architect", "AI-Assisted Testing Advocate"];
+      let i = 0, j = 0, current = '', isDeleting = false;
+      function loop() {
+        current = words[i];
+        if (isDeleting) {
+          typer.textContent = current.substring(0, j--);
+        } else {
+          typer.textContent = current.substring(0, j++);
+        }
+        if (!isDeleting && j === current.length + 1) isDeleting = true;
+        if (isDeleting && j === 0) { i = (i + 1) % words.length; isDeleting = false; }
+        setTimeout(loop, isDeleting ? 75 : 150);
+      }
+      loop();
+
+      /* ---------- SKILL-BAR ANIMATION ON SCROLL ---------- */
+      const bars = document.querySelectorAll('.skill-fill');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.style.width = entry.target.dataset.width;
+        });
+      }, { threshold: 0.5 });
+      bars.forEach(bar => observer.observe(bar));
+    </script>
+  </body>
+  </html>
